@@ -1,5 +1,6 @@
 <h1 align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=30&pause=1000&color=22D3EE&center=true&vCenter=true&width=700&lines=Hi+👋,+I'm+Abdul+Wahab;Operating+Systems+Enthusiast;Competitive+Programmer;Always+Learning+%26+Building" alt="Typing Intro" />
+  <img src="https://readme-typing-svg.demolab.com?
+    svg.demolab.com?font=Fira+Code&pause=1000&color=22D3EE&center=true&width=500&lines=Hi%2C+Hi+👋,+I'm+Abdul+Wahab;Operating+Systems+Enthusiast;Competitive+Programmer;Always+Learning" alt="Typing Intro" />
 </h1>
 
 <p align="center">
