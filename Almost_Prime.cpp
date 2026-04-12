@@ -3,8 +3,8 @@ using namespace std;
 int main() {
     int n;
     cin>>n;
-    int arr[100];
-    int k=1;
+    int arr[n];
+    int k=0;
     for (int i=1;i<=n;i++) {
         int count=0;
         for (int j=1;j<=i;j++) {
@@ -20,7 +20,7 @@ int main() {
     int count_num=0;
     for (int i=1;i<=n;i++) {
         int count=0;
-        for (int j=1;j<=k;j++) {
+        for (int j=0;j<k;j++) {
             if (i%arr[j]==0) {
                 count++;
             }
