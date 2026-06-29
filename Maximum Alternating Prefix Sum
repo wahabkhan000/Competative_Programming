@@ -1,0 +1,31 @@
+#include <iostream>
+#include <vector>
+using std::cout,std::cin,std::endl,std::vector;
+
+int main() {
+    int test = 0;
+    cin>>test;
+    for (int i=0;i<test;i++) {
+        int length = 0;
+        cin>>length;
+        int prefix[length];
+        int value = 0;
+        cin>>value;
+        prefix[0] = value;
+        for (int j=1;j<length;j++) {
+            int new_value = 0;
+            cin>>new_value;
+            if (j%2!=0) {
+                new_value *= -1;
+            }
+            prefix[j] = prefix[j-1]+new_value;
+        }
+        int max = prefix[0];
+        for (int j=1;j<length;j++) {
+            if (max<prefix[j]) {
+                max = prefix[j];
+            }
+        }
+        cout<<max<<endl;
+    }
+}
