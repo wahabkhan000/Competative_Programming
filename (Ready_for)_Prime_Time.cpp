@@ -1,5 +1,5 @@
 #include <iostream>
-using namespace std;
+using std::cout,std::cin,std::endl;
 int main() {
     int n;
     cin>>n;
