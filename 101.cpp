@@ -10,7 +10,7 @@ int main()
         int length = 0;
         std::cin>>length;
 
-        int arr[lengtth];
+        int arr[length];
         std::vector<int>front_1;
         std::vector<int>back_1;
 
@@ -39,13 +39,40 @@ int main()
             }
         }
         else{
-            int start = 0, end = front_1.size()-1;
-            while(start < end){
-                start++, end--;
+            int start = -1, end = -1;
+            for(int j = 0; j < front_1.size(); j++){
+                if(front_1[j] <= length/2){
+                    start = j;
+                }
+                else{
+                    break;
+                }
             }
-            if(start != 0){
-                start--;
-                end++;
+            for(int j = front_1.size()-1; j >= 0; j--){
+                if(front_1[j] > front_1[start]){
+                    end = j;                                                                     
+                }
+                else{
+                    break;
+                }
+            }
+
+            if(start == -1){
+                start = back_1[0];
+                front_1.push_back(start);
+                for(int j = front_1.size()-1; j > 0; j--){
+                    front_1[j] = front_1[j-1];
+                }
+                front_1[0] = start;
+                arr[start] = 1;
+                start = 0;
+
+            }
+            else if(end == -1){
+                end = back_1[back_1.size()-1];
+                front_1.push_back(end);
+                arr[end] = 1;
+                end = front_1.size()-1;
             }
             for(int j = 0; j < back_1.size(); j++){
                 if(front_1[start] > back_1[j]){
@@ -64,7 +91,9 @@ int main()
                 }
             }
 
-            for(int j = front_1[start]; j < front_1[end]; j++){
+
+
+            for(int j = front_1[start]+1; j < front_1[end]; j++){
                 arr[j] = 0;
             }
         }
@@ -72,6 +101,7 @@ int main()
         for(int j = 0 ;j < length; j++){
             std::cout<<arr[j]<<" ";
         }
+        std::cout<<"\n";
 
     }
 }
